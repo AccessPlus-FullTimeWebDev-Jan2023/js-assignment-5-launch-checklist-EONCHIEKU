@@ -43,9 +43,13 @@ function formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel) {
     } else if (validateInput(pilot) === "Is a Number" || validateInput(copilot) === "Is a Number" || validateInput(fuelLevel) === "Not a Number" || validateInput(cargoLevel) === "Not a Number") {
         window.alert("Make sure to enter valid information for each field!");
     } else {
-        
+
+        if(fuelLevel < 10,000){}
+
         list.style.visibility = 'visible';
-        copilot.innerHTML='ready to go';
+        copilot.innerHTML=`Pilot ${pilotName} is ready for launch`;
+        copilotStatus.innerHTML=`Co-pilot ${copilotName} is ready for launch`;
+
 
     }
 
