@@ -19,19 +19,9 @@ window.addEventListener("load", function() {
        console.log(listedPlanets);
     //    Below this comment call the appropriate helper functions to pick a planet fom the list of planets and add that information to your destination.
     let planetRandom = pickPlanet(listedPlanets)
-    // {let destination = document.querySelector('destination');
-    //  destination.addEventListener("", function(event))
-    // let name = document.querySelector('li[Name]').value;
-    // let diameter = document.querySelector('li[Diameter]').value;
-    // let star = document.querySelector('li[Star]').value;
-    // let distance = document.querySelector('li[Distance from Earth]').value;
-    // let moons = document.querySelector('li[Number of Moons]').value;
-    // let imageUrl = document.querySelector('img src').value;
-    addDestinationInfo(document, planetRandom.name, planetRandom.diameter, planetRandom.star, planetRandom.distance, planetRandom.moons, planetRandom.image);
+       addDestinationInfo(document, planetRandom.name, planetRandom.diameter, planetRandom.star, planetRandom.distance, planetRandom.moons, planetRandom.image);
 })
 
-let list = document.getElementById("faultyItems");
-    list.style.visibility = 'hidden';
    let form = document.querySelector('form')
    form.addEventListener('submit', function(event){
     event.preventDefault();
@@ -41,6 +31,7 @@ let list = document.getElementById("faultyItems");
     let cargoLevel = document.querySelector('input[name=cargoMass]').value;
     let list = document.getElementById("faultyItems");
     list.style.visibility = 'hidden';
+
     formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel)
    })
 })
