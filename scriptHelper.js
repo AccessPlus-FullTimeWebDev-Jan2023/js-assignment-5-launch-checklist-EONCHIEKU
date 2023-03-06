@@ -71,14 +71,25 @@ function formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel) {
 
 }
 
-async function myFetch() {
-    let planetsReturned;
-
-    planetsReturned = await fetch().then(function (response) {
+async function myFetch = fetch("https://handlers.education.launchcode.org/static/planets.json");
+myFetch.then(function(response) {
+    let planetsReturned = Math.floor(Math.random()*arr.length));
+    const jsonPromise.then(function(json){
+        planetsReturned = await fetch().then(function (response)
+    ))
+    
     });
 
     return planetsReturned;
 }
+
+// const fetchPromise = fetch("https://handlers.education.launchcode.org/static/weather.json");
+// fetchPromise.then( function(response) {
+//    const jsonPromise = response.json();
+//    jsonPromise.then( function(json) {
+//       console.log("temp", json.temp);
+//    });
+// } );
 
 function pickPlanet(planets) {
 }
