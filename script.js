@@ -30,7 +30,8 @@ window.addEventListener("load", function() {
     addDestinationInfo(document, planetRandom.name, planetRandom.diameter, planetRandom.star, planetRandom.distance, planetRandom.moons, planetRandom.image);
 })
 
-
+let list = document.getElementById("faultyItems");
+    list.style.visibility = 'hidden';
    let form = document.querySelector('form')
    form.addEventListener('submit', function(event){
     event.preventDefault();
